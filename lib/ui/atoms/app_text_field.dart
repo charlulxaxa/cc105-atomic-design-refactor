@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Atom: a labeled, validated form field. This is the single building
-/// block every field in "Add New Product" is made from.
 class AppFormField extends StatelessWidget {
   final TextEditingController controller;
   final String label;

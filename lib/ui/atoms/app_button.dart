@@ -15,9 +15,9 @@ class AppButton extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: bgcolor ?? Colors.indigo,
                         foregroundColor: fgcolor ?? Colors.white,
-                        padding: const EdgeInsets.symmetric(vertical: 14),
+                        padding: EdgeInsets.symmetric(vertical: 14),
                       ),
-                      child: Text(label, style: textStyle ?? const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)) 
+                      child: Text(label, style: textStyle ??  TextStyle(fontSize: 16, fontWeight: FontWeight.bold)) 
                     );
   }
 }

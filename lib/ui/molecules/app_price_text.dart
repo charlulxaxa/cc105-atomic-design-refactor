@@ -6,6 +6,7 @@ class AppPriceText extends StatelessWidget {
   final String currency;
 
   const AppPriceText({
+    super.key,
     required this.price,
     this.currency = 'PHP',
   });
