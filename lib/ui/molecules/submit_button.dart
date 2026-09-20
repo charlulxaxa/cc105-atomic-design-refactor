@@ -16,7 +16,10 @@ class SubmitButton extends StatelessWidget {
                     child: AppButton(
                       onPressed: onPressed,
                       label: label,
-                      fontSize: 16,fontWeight: FontWeight.bold, color: Colors.white,padding: EdgeInsets.symmetric(vertical: 14)
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold, 
+                      color: Colors.white,
+                      padding: EdgeInsets.symmetric(vertical: 14)
                     ),
                   );
   }

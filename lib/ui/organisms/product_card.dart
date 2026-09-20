@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../atoms/atoms.dart';
 import '../molecules/molecules.dart';
-import '../models/product_model.dart';
+import '../../models/product_model.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -39,8 +39,6 @@ class ProductCard extends StatelessWidget {
             children: [
             AppText(product.name, style: AppTextStyle.productName),
             AppText(product.category, style: AppTextStyle.category),
-            if (product.description != null)
-              AppText(product.description!, style: AppTextStyle.description),
             AppPriceText(price: product.price, currency: 'PHP'),
             ],
           ),
