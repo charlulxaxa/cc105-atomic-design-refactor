@@ -24,7 +24,7 @@ class _AddProductFormState extends State<AddProductForm> {
   final TextEditingController _descriptionController = TextEditingController();
   String _selectedCategory = 'Electronics';
 
-  int _nextId = 8;
+  final int _nextId = 8;
   
   @override
   void dispose() {

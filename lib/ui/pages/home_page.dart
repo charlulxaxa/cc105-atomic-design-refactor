@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:messy_catalog_activity/ui/molecules/app_snack_notification.dart';
 import '../../models/product_model.dart';
 import '../template/templates.dart';
+import '../organisms/organisms.dart';
+import '../molecules/molecules.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -61,11 +64,48 @@ class _HomePageState extends State<HomePage> {
       icon: Icons.local_drink,
     ),
   ];
-  
+
+  void onSearch(String value) {
+    setState(() {
+      _searchQuery = value;
+    });
+  }
+
+  void addtoCart(Product product) {
+    AppSnackNotification.notification(context, 'Added ${product.name} to cart');
+  }
+
+  void onDelete(Product product) {
+    setState(() {
+      _products.removeWhere((item) => item.id == product.id);
+    });
+  }
+  void addProduct(Product product){
+    setState(() {
+      _products.add(product);
+    });
+  }
   String _searchQuery = '';
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final filteredProducts = _products.where((product) {
+      return product.name.toLowerCase().contains(_searchQuery.toLowerCase());
+    });
+
+    return ProductTemplate(
+      appbar: BarApp(title: "Messy Catalog"),
+      searchbar: BarSearch(onChanged: onSearch),
+      productCard: filteredProducts
+          .map(
+            (product) => ProductCard(
+              product: product,
+              onAddToCart: () => (product),
+              onDelete: () => onDelete(product),
+            ),
+          )
+          .toList(),
+      productForm: AddProductForm(onSubmit: addProduct)
+    );
   }
 }

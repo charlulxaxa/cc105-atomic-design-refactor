@@ -15,7 +15,7 @@ class AppDropdown extends StatelessWidget {
       decoration: InputDecoration(
         labelText: label,
       ),
-      items: category.map((cat) => DropdownMenuItem(value: cat, child: AppText(cat, style: AppTextStyle.category)))
+      items: category.map((cat) => DropdownMenuItem(value: cat, child: AppText(cat, style: AppTextStyle.productName)))
                         .toList(),
       onChanged: onChanged,
     );

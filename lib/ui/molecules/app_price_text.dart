@@ -13,7 +13,7 @@ class AppPriceText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppText('\$${currency} ${price.toStringAsFixed(2)}',style : AppTextStyle.price
+    return AppText('PHP ${price.toStringAsFixed(2)}',style : AppTextStyle.price
     );
   }
 }

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import '../atoms/atoms.dart';
 
-class SearchBar extends StatelessWidget {
+class BarSearch extends StatelessWidget {
   final ValueChanged<String>? onChanged;
 
-  const SearchBar({
+  const BarSearch({
     super.key,
     required this.onChanged,
   });

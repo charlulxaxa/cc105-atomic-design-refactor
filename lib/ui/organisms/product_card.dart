@@ -32,10 +32,20 @@ class ProductCard extends StatelessWidget {
         ],
       ),
       child: Row(children: [
+        Container(
+            width: 56,
+            height: 56,
+            decoration: BoxDecoration(
+              color: Colors.indigo.shade50,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: 
         ProductIcon(icon: product.icon),
+        ),
         SizedBox(width: 12),
         Expanded(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
             AppText(product.name, style: AppTextStyle.productName),
             AppText(product.category, style: AppTextStyle.category),
