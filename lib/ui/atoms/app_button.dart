@@ -5,8 +5,12 @@ class AppButton extends StatelessWidget {
   final VoidCallback onPressed;
   final Color? bgcolor;
   final Color? fgcolor;
+  final double? fontSize;
+  final FontWeight? fontWeight;
   final TextStyle? textStyle;
-  const AppButton({super.key, required this.label, required this.onPressed, this.bgcolor, this.fgcolor, this.textStyle});
+  final EdgeInsetsGeometry? padding;
+  final Color? color;
+  const AppButton({super.key, required this.label, required this.onPressed, this.bgcolor, this.fgcolor, this.fontSize, this.fontWeight, this.textStyle, this.padding, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +19,9 @@ class AppButton extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: bgcolor ?? Colors.indigo,
                         foregroundColor: fgcolor ?? Colors.white,
-                        padding: EdgeInsets.symmetric(vertical: 14),
+                        padding: padding ?? EdgeInsets.symmetric(vertical: 14),
                       ),
-                      child: Text(label, style: textStyle ??  TextStyle(fontSize: 16, fontWeight: FontWeight.bold)) 
+                      child: Text(label, style: textStyle ??  TextStyle(fontSize: fontSize, fontWeight: fontWeight, color: color)) 
                     );
   }
 }
