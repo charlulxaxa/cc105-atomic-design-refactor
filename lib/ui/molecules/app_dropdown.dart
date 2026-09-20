@@ -5,11 +5,13 @@ class AppDropdown extends StatelessWidget {
   final String label;
   final List<String> category;
   final ValueChanged<String?>? onChanged;
-  const AppDropdown({super.key, required this.label, required this.category, this.onChanged});
+  final String? initial;
+  const AppDropdown({super.key, required this.label, required this.category, this.onChanged, this.initial});
 
   @override
   Widget build(BuildContext context) {
     return DropdownButtonFormField<String>(
+      initialValue: initial,
       decoration: InputDecoration(
         labelText: label,
       ),

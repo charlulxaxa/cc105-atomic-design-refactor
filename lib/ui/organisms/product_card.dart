@@ -17,8 +17,8 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(12),
+      margin: EdgeInsets.only(bottom: 10),
+      padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8),
@@ -27,7 +27,7 @@ class ProductCard extends StatelessWidget {
           BoxShadow(
             color: Colors.grey.withValues(alpha: 0.3),
             blurRadius: 4,
-            offset: const Offset(0, 2),
+            offset: Offset(0, 2),
           ),
         ],
       ),
@@ -45,7 +45,7 @@ class ProductCard extends StatelessWidget {
         ),
         Column(children: [
           AppButton(label: 'Add to Cart', onPressed: onAddToCart),
-          const SizedBox(height: 6),
+          SizedBox(height: 6),
           IconButton(onPressed: onDelete, icon: Icon(Icons.delete), color: Colors.red),
         ],)
       ],)
