@@ -100,7 +100,7 @@ class _HomePageState extends State<HomePage> {
           .map(
             (product) => ProductCard(
               product: product,
-              onAddToCart: () => (product),
+              onAddToCart: () => addtoCart(product),
               onDelete: () => onDelete(product),
             ),
           )
