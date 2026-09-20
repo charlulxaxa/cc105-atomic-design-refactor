@@ -24,7 +24,7 @@ class _AddProductFormState extends State<AddProductForm> {
   final TextEditingController _descriptionController = TextEditingController();
   String _selectedCategory = 'Electronics';
 
-  final int _nextId = 8;
+  int _nextId = 8;
   
   @override
   void dispose() {
@@ -129,6 +129,7 @@ class _AddProductFormState extends State<AddProductForm> {
                           final newProduct = _validate();
                           if (newProduct != null){
                             widget.onSubmit(newProduct);
+                            _nextId +=1;
                             _resetForm();
                           }else{
                             AppSnackNotification.notification(context, 'Please check the form and try again.');
