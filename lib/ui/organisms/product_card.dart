@@ -56,7 +56,7 @@ class ProductCard extends StatelessWidget {
         Column(children: [
           AppButton(label: 'Add to Cart', onPressed: onAddToCart),
           SizedBox(height: 6),
-          IconButton(onPressed: onDelete, icon: Icon(Icons.delete), color: Colors.red),
+          IconButton(onPressed: onDelete, icon: Icon(Icons.delete_outline), color: Colors.red),
         ],)
       ],)
     );
