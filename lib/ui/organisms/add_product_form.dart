@@ -128,6 +128,7 @@ class _AddProductFormState extends State<AddProductForm> {
                         onPressed: (){
                           final newProduct = _validate();
                           if (newProduct != null){
+                            AppSnackNotification.notification(context, '${_nameController.text} added to catalog', Colors.green);
                             widget.onSubmit(newProduct);
                             _nextId +=1;
                             _resetForm();

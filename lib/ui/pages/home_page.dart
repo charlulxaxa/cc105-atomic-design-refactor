@@ -96,7 +96,7 @@ class _HomePageState extends State<HomePage> {
     return ProductTemplate(
       appbar: BarApp(title: "Messy Catalog"),
       searchbar: BarSearch(onChanged: onSearch),
-      productCard: filteredProducts
+      productCard:filteredProducts
           .map(
             (product) => ProductCard(
               product: product,
